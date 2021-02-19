@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - staging
-#       - dev
-#       - main
-#       - test
+      - dev
+      - main
+      - test
 
 jobs:
   deploy:
@@ -32,8 +32,6 @@ jobs:
       - name: Deploy
         env:
           ENV_NAME: ${{ steps.extract_branch.outputs.branch }}
-#           PGSQL_PASSWORD: ${{ secrets.PGSQL_PASSWORD }}
-#           JWT_SECRET: ${{ secrets.JWT_SECRET }}
         run: |
           echo "Deploying to $ENV_NAME"
           make deploy-all
