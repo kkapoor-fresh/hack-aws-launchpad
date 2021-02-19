@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - staging
-      - dev
-      - main
-      - test
+#       - dev
+#       - main
+#       - test
 
 jobs:
   deploy:
